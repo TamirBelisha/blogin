@@ -41,7 +41,7 @@
     background-color: var(--clr5);
     font-size: 3rem;
     position: absolute;
-    right: 1rem;
+    right: 0;
     cursor: pointer;
 }
 

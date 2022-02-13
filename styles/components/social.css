@@ -12,33 +12,33 @@
 }
 
 .facebook-icon {
-    background-image: url('/img/facebook-fade.jpg');
+    background-image: url('../../img/facebook-fade.jpg');
 }
 
 .facebook-icon:hover {
-    background-image: url('/img/facebook.jpg');
+    background-image: url('../../img/facebook.jpg');
 }
 
 .twitter-icon {
-    background-image: url('/img/twitter-fade.jpg');
+    background-image: url('../../img/twitter-fade.jpg');
 }
 
 .twitter-icon:hover {
-    background-image: url('/img/twitter.jpg');
+    background-image: url('../../img/twitter.jpg');
 }
 
 .ball-icon {
-    background-image: url('/img/ball-fade.jpg');
+    background-image: url('../../img/ball-fade.jpg');
 }
 
 .ball-icon:hover {
-    background-image: url('/img/ball.jpg');
+    background-image: url('../../img/ball.jpg');
 }
 
 .be-icon {
-    background-image: url('/img/be-fade.jpg');
+    background-image: url('../../img/be-fade.jpg');
 }
 
 .be-icon:hover {
-    background-image: url('/img/be.jpg');
+    background-image: url('../../img/be.jpg');
 }
