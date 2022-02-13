@@ -1,0 +1,44 @@
+.social-container>*:not(:last-child) {
+    margin-right: 1.25rem;
+}
+
+.social-logo {
+    height: 40px;
+    width: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 100%;
+    cursor: pointer;
+}
+
+.facebook-icon {
+    background-image: url('/img/facebook-fade.jpg');
+}
+
+.facebook-icon:hover {
+    background-image: url('/img/facebook.jpg');
+}
+
+.twitter-icon {
+    background-image: url('/img/twitter-fade.jpg');
+}
+
+.twitter-icon:hover {
+    background-image: url('/img/twitter.jpg');
+}
+
+.ball-icon {
+    background-image: url('/img/ball-fade.jpg');
+}
+
+.ball-icon:hover {
+    background-image: url('/img/ball.jpg');
+}
+
+.be-icon {
+    background-image: url('/img/be-fade.jpg');
+}
+
+.be-icon:hover {
+    background-image: url('/img/be.jpg');
+}

@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    /* color: var(--clr1); */
+    line-height: 1.71;
+    font-family: lato-regular, sans-serif;
+}
+
+body {
+    margin: 0;
+    font-size: 0.875rem;
+    border: 4px solid #292929;
+}
+
+p {
+    color: #606060;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-weight: 400;
+}

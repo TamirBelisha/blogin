@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Blogin</title>
+</head>
+
+<body>
+    <div class="main-screen" onclick="toggleMenu()"></div>
+    <div class="main-screen-modal" onclick="onOpenModal()"></div>
+    <header class="main-header">
+        <div class="main-header main-layout flex align-center space-between">
+
+            <div class="logo pointer">
+                <h1>Blogin<span>.</span></h1>
+            </div>
+
+            <nav class="main-nav-container">
+                <ul class="clean-list flex">
+                    <li class="journal flex col" data-name="journal" onclick="onNavClick(this)">Journal
+                        <ul class="clean-list flex col journal-list">
+                            <li>October 2016</li>
+                            <li>January 2017</li>
+                            <li>April 2017</li>
+                            <li>July 2017</li>
+                        </ul>
+                    </li>
+                    <li onclick="onNavClick(this)" id="to-hide">About</li>
+                    <li onclick="onNavClick(this)" id="to-hide">Work</li>
+                    <li onclick="onNavClick(this)" id="to-hide">Contact</li>
+                </ul>
+            </nav>
+            <button class="btn-menu" onclick="toggleMenu()">☰</button>
+        </div>
+    </header>
+    <main class="main-content main-layout">
+        <div class="body-border"></div>
+        <div class="card flex gap">
+            <img src="/img/post1.jpg" alt="" class="card-image">
+            <div class="flex col space-between">
+                <div class="card-title">
+                    <h1>Duis aute irure dolor in henderit in voluptate.</h1>
+                </div>
+                <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur...</p>
+                <button class="continue-reading" onclick="onOpenModal()">Continue Reading</button>
+            </div>
+        </div>
+        <div class="card flex gap">
+            <img src="/img/post2.jpg" alt="" class="card-image">
+            <div class="flex col space-between">
+                <div class="card-title">
+                    <h1>Duis aute irure dolor in henderit in voluptate.</h1>
+                </div>
+                <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur...</p>
+                <button class="continue-reading" onclick="onOpenModal()">Continue Reading</button>
+            </div>
+        </div>
+        <div class="card flex gap">
+            <img src="/img/post3.jpg" alt="" class="card-image">
+            <div class="flex col space-between">
+                <div class="card-title">
+                    <h1>Duis aute irure dolor in henderit in voluptate.</h1>
+                </div>
+                <p class="card-text">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo doconsequat, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                    dolore eu fugiat nulla pariatur...</p>
+                <button class="continue-reading" onclick="onOpenModal()">Continue Reading</button>
+            </div>
+        </div>
+        <nav class="pagination flex space-between align-center">
+            <div class="prev pointer">← Previous</div>
+            <div class="next pointer">Next →</div>
+        </nav>
+    </main>
+    <div class="modal flex col align-center hide-modal">
+        <h1>Join us to get access to the latest stories!</h1>
+        <div class="flex">
+            <input type="email" class="email-input" placeholder="Write your email here">
+            <input type="submit" class="submit" value="submit">
+        </div>
+        <button class="btn-modal" onclick="onOpenModal()">Close</button>
+    </div>
+    <footer class="main-footer flex align-center">
+        <div class="logo mbottom pointer">
+            <h1>Blogin<span>.</span></h1>
+        </div>
+        <small>© 2014 Blogin.com  -  All Rights Reserved  -  Find more free Templates at <span>Pixelhint.com</span></small>
+        <ul class="flex clean-list social-container">
+            <li>
+                <div class="social-logo facebook-icon"></div>
+            </li>
+            <li>
+                <div class="social-logo twitter-icon"></div>
+            </li>
+            <li>
+                <div class="social-logo be-icon"></div>
+            </li>
+            <li>
+                <div class="social-logo ball-icon"></div>
+            </li>
+        </ul>
+    </footer>
+    <script>
+        function onOpenModal() {
+            document.querySelector('.modal').classList.toggle('hide-modal')
+            document.body.classList.toggle('modal-open')
+        }
+
+        function toggleMenu() {
+            document.body.classList.toggle("menu-open");
+            var elBtn = document.querySelector('.btn-menu');
+            if (elBtn.innerText === '☰') elBtn.innerText = 'X'
+            else elBtn.innerText = '☰'
+            Array.from(document.querySelectorAll('#to-hide')).forEach((el) => el.classList.remove('hide'))
+            document.querySelector('.journal-list').classList.remove('show-list')
+                // var elJournalNav = document.querySelector('.journal');
+                // if (elJournalNav.innerText === 'JOURNAL') elJournalNav.innerText = 'Home'
+                // else elJournalNav.innerText = 'Journal'
+
+        }
+
+        function onNavClick(el) {
+            var elJournalList = document.querySelector('.journal-list');
+            if (el.dataset.name === 'journal') {
+                elJournalList.classList.toggle('show-list')
+                if (window.innerWidth < 790 && elJournalList.classList.contains('show-list')) {
+                    Array.from(document.querySelectorAll('#to-hide')).forEach((el) => el.classList.add('hide'))
+                } else Array.from(document.querySelectorAll('#to-hide')).forEach((el) => el.classList.remove('hide'))
+            } else elJournalList.classList.remove('show-list')
+
+            Array.from(document.querySelectorAll('.main-nav-container li')).forEach((el) => {
+                el.classList.remove('clicked');
+            })
+            el.classList.add('clicked')
+        }
+    </script>
+</body>
+
+</html>

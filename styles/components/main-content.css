@@ -1,0 +1,26 @@
+.main-content {
+    border-right: 1px solid #E1E0E0;
+    border-left: 1px solid #E1E0E0;
+}
+
+.body-border {
+    height: 5rem;
+}
+
+.pagination {
+    color: #818181;
+    text-transform: uppercase;
+    font-family: champagne-bold;
+    font-size: 1.125rem;
+    border-top: 1px solid #E1E0E0;
+}
+
+.prev,
+.next {
+    margin: 1.875rem;
+}
+
+.prev:hover,
+.next:hover {
+    color: var(--clr2)
+}

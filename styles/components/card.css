@@ -1,0 +1,65 @@
+.card {
+    flex-basis: 100%;
+    margin-bottom: 5rem;
+}
+
+.card h1 {
+    font-family: lato-bold;
+    color: var(--clr1);
+    line-height: 1.7rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* .card button {
+    height: 2.5rem;
+    width: 11.562rem;
+    background-color: white;
+    color: #C2C2C2;
+    border: 1px solid #C2C2C2;
+    border-radius: 200px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-family: lato-bold, sans-serif;
+    position: relative;
+} */
+
+.card button {
+    cursor: pointer;
+    font-family: lato-bold, sans-serif;
+    padding: 0 1.25em;
+    line-height: 2.25;
+    background-color: white;
+    border: 2px solid var(--clr4);
+    border-radius: 2em;
+    color: var(--clr4);
+    align-self: flex-start;
+    position: relative;
+    transition: padding .3s;
+    display: inline-block;
+}
+
+.card button:hover {
+    color: var(--clr2);
+    border: 2px solid var(--clr2);
+    padding-inline-end: 2.3125em;
+}
+
+.card button::after {
+    content: "→";
+    position: absolute;
+    right: .75em;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.card button:hover::after {
+    transition: opacity .3s .3s;
+    opacity: 1;
+}
+
+.card-image {
+    max-height: 19.375rem;
+    max-width: 29.375rem;
+}

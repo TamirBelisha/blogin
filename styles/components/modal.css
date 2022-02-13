@@ -1,0 +1,36 @@
+.modal .email-input {
+    height: 3rem;
+    width: 50vw;
+}
+
+.modal .submit {
+    height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #7f7f7f;
+    color: #fbffff;
+    border: 0;
+    cursor: pointer;
+}
+
+.modal .btn-modal {
+    background-color: #7f7f7f;
+    color: #fbffff;
+    border: 0;
+    width: calc(50vw + 72px);
+    height: 3rem;
+    cursor: pointer;
+}
+
+.modal {
+    background-color: white;
+    justify-content: space-evenly;
+    opacity: 1;
+    transition: opacity .6s;
+    z-index: 100;
+}
+
+.hide-modal {
+    opacity: 0;
+    pointer-events: none;
+}

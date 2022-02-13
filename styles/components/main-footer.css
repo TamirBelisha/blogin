@@ -1,0 +1,22 @@
+.main-footer {
+    background-color: #F8F8F8;
+    height: 315px;
+    padding: 80px;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+small {
+    font-family: champagne, sans-serif;
+    font-size: 0.8125rem;
+    margin-block-end: 2.1875rem;
+}
+
+small span {
+    font-family: champagne-bold, sans-serif;
+    cursor: pointer;
+}
+
+.mbottom {
+    margin-block-end: 1rem;
+}
